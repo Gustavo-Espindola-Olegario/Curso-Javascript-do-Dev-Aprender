@@ -366,3 +366,381 @@
 // for (let indice in cores) {
 //   console.log(indice, cores[indice]);
 // }
+
+// const cores = ['Vermelho', 'Azul', 'Verde'];
+// for(let cor of cores){
+//   console.log(cor);
+// }
+
+// const numeros = [1,2,3,4,5];
+// for(let n of numeros) {
+//   console.log(n);
+// }
+
+// Exercícios 14: Mini-projeto 2, máximo entre dois valores
+// let n1 = 7;
+// let n2 = 5;
+// maiorNumero();
+// function maiorNumero() {
+//   if(n1 > n2) {
+//     return console.log(n1);
+//   }else {
+//     return console.log(n2);
+//   }
+// }
+// // Uma forma de código mais limpa
+// let ValorMaior = max(17,11);
+// console.log(ValorMaior);
+// function max(numero1, numero2) {
+//   return numero1 > numero2 ? numero1 : numero2;
+// }
+
+// Exercícios 15: Mini-projeto 3, FizzBuzz
+// Divisível por 3 => Fizz
+// Divisível por 5 => Buzz
+// Divisível por 3 e 5 => FizzBuzz
+// Não divisível por 3 ou 5 => entrada
+// Não é um número => 'Não é um número'
+
+// Meu exercício:
+// let resultado = 1;
+// fizzBuzz();
+// function fizzBuzz() {
+//   if(typeof resultado !== 'number') {
+//     return console.log('Não é um número');
+//   }else if(resultado % 3 === 0 && resultado % 5 === 0) {
+//     return console.log('FizzBuzz');
+//   }else if(resultado % 3 === 0) {
+//     return console.log('Fizz');
+//   }else if(resultado % 5 === 0) {
+//     return console.log('Buzz');
+//   }else if(resultado % 3 !== 0 || resultado % 5 !== 0) {
+//     return console.log(resultado);
+//   }
+// }
+
+// O exercício feito:
+// const resultado = fizzBuzz(1);
+// console.log(resultado);
+// function fizzBuzz(entrada) {
+//   if(typeof entrada !== 'number') {
+//     return 'Não é um número';
+//     }
+//     if((entrada % 3 === 0) && (entrada % 5 === 0)) {
+//     return 'FizzBuzz';
+//     }
+//     if(entrada % 3 === 0) {
+//     return 'Fizz';
+//     }
+//     if(entrada % 5 === 0) {
+//     return 'Buzz';
+//     }
+//     return entrada;
+// }
+
+// Exercícios 16: Mini-projeto 4, Medidor de velocidade
+// Velocidade máxima de até 70
+// a cada 5km acima do limite você ganha 1 ponto na carteira
+// Math.Floor()
+// caso pontos seja maior que 12 -> "Carteira Suspendida"
+
+// verificarVelocidade(130);
+// function verificarVelocidade(velocidade) {
+//   const velocidadeMaxima = 70;
+//   const kmPorPonto = 5;
+//   if(velocidade <= velocidadeMaxima) {
+//     console.log('Ok');
+//   }else {
+//     const pontos = Math.floor((velocidade - velocidadeMaxima) / kmPorPonto);
+//     if(pontos >= 12) {
+//       console.log('Carteira Suspensa');
+//     }else
+//       console.log('Pontos', pontos);
+//   }
+// }
+
+// Exercícios 17: Mini-projeto 5, Par ou Ímpar
+// Receber uma quantidade de valores para avaliar
+// Função exibe se cada valor é par ou ímpar
+
+// Meu exercicio:
+// var n = 10;
+// parOuImpar();
+// function parOuImpar() {
+//   for(let i = 0; i <= n; i++) {
+//     if(i % 2 == 0){
+//       console.log("Par, ", i);
+//     }else {
+//       console.log("Ímpar, ", i);
+//     }
+//   }
+// }
+// O exercicio feito:
+// exibirTipo(6);
+// function exibirTipo(limite) {
+//   for(let i = 0; i <= limite; i++) {
+//   if(i % 2 === 0)
+//     console.log("Par", i);
+//   else 
+//     console.log("Ímpar", i);
+//   }
+// }
+
+// Exercícios 18: Mini-projeto 6, Encontre o String
+// Criar um método para ler propriedades de um objeto e 
+// Exibir somente as propriedades do tipo string que estão nesse objeto
+
+// const filme = {
+//   titulo: 'Vingadores',
+//   ano: 2018,
+//   diretor: 'Robin',
+//   personagem: 'Thor'
+// };
+
+// exibirPropriedades(filme);
+// function exibirPropriedades(obj) {
+//   for(prop in obj) {
+//   if(typeof obj[prop] === 'string') {
+//     console.log(prop, obj[prop])
+//   }  
+// }
+// }
+
+// const carro = {
+//   nome: 'Zezão',
+//   marca: 'fiat',
+//   ano: 2001,
+//   cor: 'azul',
+//   placa: 'Ri343MJ',
+//   preco: 9000.50
+// };
+// exibirPropriedadesCarro(carro)
+// function exibirPropriedadesCarro(obj) {
+//   for(parte in obj) {
+//     if(typeof obj[parte] === 'string') {
+//       console.log(parte, obj[parte]);
+//     }
+//   }
+// }
+
+// Exercícios 19: Mini-projeto 7, Múltiplos de 3 e 5.
+// Criar função somar que retorna a
+// soma de todos os múltiplos de 3 e 5
+
+// com valor 10:
+// Serão múltiplos de 3: 3, 6, 9.
+// Serão múltiplos de 5: 5, 10.
+
+// Somando os múltiplos
+// Armazenar os múltiplos de 3
+// Armazenar os múltiplos de 5
+// somar os dois
+
+// soma(10);
+// function soma(limite) {
+//   let multiplo3 = 0;
+//   let multiplo5 = 0;
+//   for(let i = 0; i <= limite; i++) {
+//     if(i % 3 === 0) {
+//       multiplo3 += i;
+//     }
+//     if(i % 5 === 0) {
+//       multiplo5 += i;
+//     }
+//   }
+//   console.log(multiplo3 + multiplo5);
+// }
+
+// Meu exercício com múltiplos de 4 e 11
+// soma(22);
+// function soma(numeroEscolhido) {
+//   let multiplo4 = 0;
+//   let multiplo11 = 0;
+
+//   for(let i = 0; i <= numeroEscolhido; i++) {
+//     if(i % 4 === 0) {
+//       multiplo4 += i;
+//     }
+//     if(i % 11 === 0) {
+//       multiplo11 += i;
+//     }
+//   }
+//   let resultado = multiplo4 + multiplo11;
+//   console.log('O resultado será = ' + resultado);
+// }
+
+// Exercícios 20: Mini-projeto 8, Média de nota escolar
+// Obter a mpedia a partir de um array
+
+// se
+// 0-59: F
+// 60-69: D
+// 70-79: C
+// 80-89: B
+// 90-100: A
+// Meu exercício:
+//const array = [70, 70, 80];
+// média: 73.33
+// mediaDoAluno(array)
+// function mediaDoAluno(notas) {
+//   let notasTotal = 0;
+//   for(let nota of notas) {
+//     notasTotal += nota;
+//   }
+//   let media = notasTotal/3;
+//   if(media >= 0 && media <= 59) {
+//     console.log('Nota F');
+//   }else if(media >= 60 && media <= 69) {
+//     console.log('Nota D');
+//   }else if(media >= 70 && media <= 79) {
+//     console.log('Nota C');
+//   }else if(media >= 80 && media <= 89) {
+//     console.log('Nota B');
+//   }else if(media >= 90 && media <= 100) {
+//     console.log('Nota A');
+//   }
+//   console.log(media);
+// }
+// Exercício feito pelo professor:
+// const array = [70,70,80];
+// console.log(mediaDoAluno(array));
+// function mediaDoAluno(notas) {
+//   const media = calcularMedia(notas);
+//   if(media < 59) return 'F';
+//   if(media < 69) return 'D';
+//   if(media < 79) return 'C';
+//   if(media < 89) return 'B';
+//   return 'A';
+// }
+
+// function calcularMedia(array) {
+//   let soma = 0;
+//   for(let valor of array) {
+//     soma += valor;
+//   }
+//   return soma / (array.length);
+// }
+
+// Exercícios 21: Mini-projeto 9, Contador de asteríscos
+// Criar uma função que exibe a quantidade de *
+
+// que aquela linha possui
+// exiberAsteriscos(10); 
+// function exiberAsteriscos(valor) {
+//   let padrao = '';
+//   for(let i = 1; i <= valor; i++) {
+//     padrao += '*';
+//     console.log(padrao);
+//   }
+// }
+// exiberAsteriscos(10); 
+// function exiberAsteriscos(linhas) {
+// let padrao = '';
+// for(let linha = 1; linha <= linhas; linha++) {
+//   padrao += '*';
+//   console.log(padrao);
+// }
+
+//   for(let linha = 1; linha <= linhas; linha++) {
+//     let padrao = '';
+//     for(let i = 0; i < linha; i++) {
+//       padrao += '*';
+//     }
+//     console.log(padrao);
+//   }
+// }
+
+// Exercícios 22: Mini-projeto 10, Números Primos
+
+// Criar função para mostrar os números primos
+// Primos
+// Compostos
+// Ex: 10, 11 num laço crescente
+// Numero primo é divisivel por (1 e por ele mesmo)
+// 10 - 1, 2, 4, 6, 10
+// 11 - 1, 11 (11) --> número primo
+
+// exibirNumerosPrimos(15);
+// function exibirNumerosPrimos(limite) {
+//   for(let numero = 2; numero <= limite; numero++) {
+//     let ehPrimo = true;
+//     for(let divisor = 2; divisor < numero; divisor++) {
+//       if(numero % divisor === 0) {
+//         ehPrimo = false;
+//         break;
+//       }
+//     }
+//     if(ehPrimo) console.log(numero);
+//   }
+// }
+
+// Forma mais clean
+// exibirNumerosPrimos(15);
+// function exibirNumerosPrimos(limite) {
+//   for(let numero = 2; numero <= limite; numero++) {
+//     if(numeroPrimo(numero)) console.log(numero);
+//   }
+// }
+
+// function numeroPrimo(numero) {
+//     for(let divisor = 2; divisor < numero; divisor++) {
+//       if(numero % divisor === 0) {
+//         return false;
+//       }
+//     }
+//     return true
+// }
+
+// Exercícios 23: Factory Functions (Função de Fábrica)
+// O objetivo é desenvolver um função q cria celulares dinamicamente
+// O object q a gente vai usar:
+// const celular = {
+//   marcaCelular: 'ASUS',
+//   tamanhoTela: {
+//     vertical: 155,
+//     horizontal: 75
+//   },
+//   capacidadeBateria: 5000,
+//   ligar: function() {
+//     console.log("Fazendo ligação...")
+//   }
+// }
+
+// function criarCelular() {
+//   const celular = {
+//     marcaCelular,
+//     tamanhoTela,
+//     capacidadeBateria,
+//     ligar() {
+//       console.log("Fazendo ligação...")
+//     }
+//   }
+// }
+// const celular1 = criarCelular('Zenfone', 5.5, 5000);
+// console.log(celular1);
+
+// Modelo de objeto: 
+// const pais = {
+//   nome: 'Canada', 
+//   numeroDeEstados: 10,
+//   capital: 'Ottawa',
+//   primeiraLingua: 'Inglês',
+//   segundaLingua: 'Francês',
+//   PIB: 1643000000000,
+//   ehDesenvolvido: true
+// }
+// function cadastrarPais(nome,numeroDeEstados,capital,primeiraLingua,segundaLingua,PIB,ehDesenvolvido) {
+//   const pais = {
+//     nome: nome, // nome: nome ; nome; fazem a mesma coisa
+//     numeroDeEstados,
+//     capital,
+//     primeiraLingua,
+//     segundaLingua,
+//     PIB,
+//     ehDesenvolvido
+//   }
+//   return pais;
+// }
+// const cadastro = cadastrarPais('Canada', 10, 'Ottawa', 'Inglês', 'Francês', 1643000000000, true);
+// console.log(cadastro);
+

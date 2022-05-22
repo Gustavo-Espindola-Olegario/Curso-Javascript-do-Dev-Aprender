@@ -107,7 +107,7 @@
   Operadores Bitwise
 */
 
-//Exercícios 7: Operadores Aritiméticos
+//Exercício 7: Operadores Aritiméticos
 //let salario = 100;
 /* 
     Operadores Aritiméticos:
@@ -139,7 +139,7 @@
 //console.log(idade--);
 //console.log(idade);
 
-//Exercícios 8: Operadores de igualdade
+//Exercício 8: Operadores de igualdade
 //let valorTecladoGamer = 200;
 //valorTecladoGamer += valorTecladoGamer;
 // é o mesmo que valorTecladoGamer = valorTecladoGamer + valorTecladoGamer; o resultado desse dois será de 400
@@ -158,7 +158,7 @@
 // console.log(1 === 1); //resultado será true
 // console.log("1" === 1); //resultado será false
 
-//Exercícios 9: Operadores Ternários
+//Exercício 9: Operadores Ternários
 // Tem um cliente, se os pontos maior q 100 "premium', se não "comum"
 // let pontos = 100;
 // let tipo = pontos > 100 ? 'premium' : 'comum';
@@ -168,7 +168,7 @@
 // let aprovado = idade >= 18 ? 'Maior' : 'Menor';
 // console.log(aprovado);
 
-//Exercícios 10: Operadores Lógicos
+//Exercício 10: Operadores Lógicos
 // Operado Lógico e (&&)
 // Retorna TRUE se os dois operandos forem true
 // console.log(true && true); //retornou true
@@ -193,7 +193,7 @@
 // let maior = !maiorIdade;
 // console.log("De maior?", maior);
 
-// Exercícios 11: Comparação de valores não boleanos
+// Exercício 11: Comparação de valores não boleanos
 // Falsy e truthy
 // O operador Lógico ou (||), usa o conceito de falsy e truthy, e retorna o primeiro truthy que ele encontrar. Ex:
 // false || true --> true
@@ -216,7 +216,7 @@
 // let corPerfil = corPersonalizada || corPadrao;
 // console.log(corPerfil);
 
-// Exercícios 12: Mini Projeto 1, trocando valores
+// Exercício 12: Mini Projeto 1, trocando valores
 // let a = 10;
 // let b = 20;
 // let extra;
@@ -225,7 +225,7 @@
 // b = extra; // b = 10
 // console.log(a,b);
 
-// Exercícios 13: Condicionais
+// Exercício 13: Condicionais
 // No Javascript existem duas principais condicionais: 
 // if..else
 // switch..case
@@ -377,7 +377,7 @@
 //   console.log(n);
 // }
 
-// Exercícios 14: Mini-projeto 2, máximo entre dois valores
+// Exercício 14: Mini-projeto 2, máximo entre dois valores
 // let n1 = 7;
 // let n2 = 5;
 // maiorNumero();
@@ -395,7 +395,7 @@
 //   return numero1 > numero2 ? numero1 : numero2;
 // }
 
-// Exercícios 15: Mini-projeto 3, FizzBuzz
+// Exercício 15: Mini-projeto 3, FizzBuzz
 // Divisível por 3 => Fizz
 // Divisível por 5 => Buzz
 // Divisível por 3 e 5 => FizzBuzz
@@ -459,7 +459,7 @@
 //   }
 // }
 
-// Exercícios 17: Mini-projeto 5, Par ou Ímpar
+// Exercício 17: Mini-projeto 5, Par ou Ímpar
 // Receber uma quantidade de valores para avaliar
 // Função exibe se cada valor é par ou ímpar
 
@@ -486,7 +486,7 @@
 //   }
 // }
 
-// Exercícios 18: Mini-projeto 6, Encontre o String
+// Exercício 18: Mini-projeto 6, Encontre o String
 // Criar um método para ler propriedades de um objeto e 
 // Exibir somente as propriedades do tipo string que estão nesse objeto
 
@@ -523,7 +523,7 @@
 //   }
 // }
 
-// Exercícios 19: Mini-projeto 7, Múltiplos de 3 e 5.
+// Exercício 19: Mini-projeto 7, Múltiplos de 3 e 5.
 // Criar função somar que retorna a
 // soma de todos os múltiplos de 3 e 5
 
@@ -569,7 +569,7 @@
 //   console.log('O resultado será = ' + resultado);
 // }
 
-// Exercícios 20: Mini-projeto 8, Média de nota escolar
+// Exercício 20: Mini-projeto 8, Média de nota escolar
 // Obter a mpedia a partir de um array
 
 // se
@@ -621,7 +621,7 @@
 //   return soma / (array.length);
 // }
 
-// Exercícios 21: Mini-projeto 9, Contador de asteríscos
+// Exercício 21: Mini-projeto 9, Contador de asteríscos
 // Criar uma função que exibe a quantidade de *
 
 // que aquela linha possui
@@ -650,7 +650,7 @@
 //   }
 // }
 
-// Exercícios 22: Mini-projeto 10, Números Primos
+// Exercício 22: Mini-projeto 10, Números Primos
 
 // Criar função para mostrar os números primos
 // Primos
@@ -691,7 +691,7 @@
 //     return true
 // }
 
-// Exercícios 23: Factory Functions (Função de Fábrica)
+// Exercício 23: Factory Functions (Função de Fábrica)
 // O objetivo é desenvolver um função q cria celulares dinamicamente
 // O object q a gente vai usar:
 // const celular = {
@@ -744,3 +744,311 @@
 // const cadastro = cadastrarPais('Canada', 10, 'Ottawa', 'Inglês', 'Francês', 1643000000000, true);
 // console.log(cadastro);
 
+// Exercícios 24: Constructor Functions
+// camelCase = umDoisTresQuatro
+
+// Pascal Case = UmDoisTresQuatro -> Celular
+// function Celular(marcaCelular, tamanhoTela, capacidadeBateria) {
+//   this.marcaCelular = marcaCelular, // this simplismente referencia o objeto atual
+//   this.tamanhoTela = tamanhoTela,
+//   this.capacidadeBateria = capacidadeBateria,
+//   this.ligar = function() {
+//     console.log("Fazendo ligação...");
+//   }
+// }
+
+// const celular = new Celular('asus', 5.5, 5000); // nem Celular, tá criando/ instanciando um novo objeto de celular através doa parâmetros dentro do parênteses no Celular().
+//console.log(celular);
+// A grande diferença entre do Constructor e o Factory é que pelo Constructor vc faz a criação através do new, enqaunto no Factory a crianção é dentro da própria função pelo Return por exemplo.
+
+// function Estado(nomeEstado, quantCidades, populacao, regiao, idhEstado, ehDesenvolvido) {
+//   this.nomeEstado = nomeEstado,
+//   this.quantCidades = quantCidades,
+//   this.populacao = populacao,
+//   this.regiao = regiao,
+//   this.verificarEstadoDoSistema = function(){
+//     console.log('Funcinando...');
+//   },
+//   this.idhEstado = idhEstado,
+//   this.ehDesenvolvido = ehDesenvolvido
+// }
+
+// const estado = new Estado('Santa Catarina', 500, 5500000, 'Sul', 747, true);
+
+// console.log(estado);
+
+// Exercício 25: Natureza dinâmica de Objetos(por ex: da pra adicionar, deletar e atualizar)
+// const mouse = {
+//   cor: 'red',
+//   marcar: 'dazz'
+// }
+// mouse.velocidade = 5000; //adicionando uma nova propriedade
+// mouse.trocaDPI = function() {
+//   console.log('Mudando DPI');
+// }
+// delete mouse.velocidade;  //deletando a velocidade de mouse
+// delete mouse.trocaDPI;
+// console.log(mouse);
+
+// Exercício 26: Clonando Objetos
+// const celular = {
+//   marcaCelular: 'ASUS',
+//   tamanhoTela: {
+//     vertical: 155,
+//     horizontal: 75
+//   },
+//   ligar: function() {
+//     console.log("Fazendo ligação...")
+//   }
+// }
+//Object.assign({}, celular); -> {} é alvo, ou seja as propriedades do objetos podendo até adicionar mais propriedades no objeto se quiser e celular vai ser o objeto q ele vai copiar
+// const novoObjeto = Object.assign({
+//   bateria: 5000
+// }, celular);
+// console.log(novoObjeto);
+
+// Tem outra maneira de copiar mais limpa
+//const objeto2 = {...celular}; // ... é um spread = espalhamento e celular vai ser o nome do objeto q ele vai copiar
+//console.log(objeto2);
+
+// Meu exercício:
+// const pais = {
+//   nome: 'Canada', 
+//   numeroDeEstados: 10,
+//   capital: 'Ottawa',
+//   primeiraLingua: 'Inglês',
+//   segundaLingua: 'Francês',
+//   PIB: 1643000000000,
+//   ehDesenvolvido: true
+// }
+
+// const pais1 = Object.assign({
+//   nomeRegioes: "São Paulo"
+// }, pais);
+// console.log(pais1);
+// const pais2 = {...pais};
+// console.log(pais2);
+
+// Exercício 27: Função: Math
+// site pra referências: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math
+// No console:
+// Math.random();
+// Math.max(10, 11 ,143, 19);
+// Math.min(10, 11 ,143, 19);
+// Math.pow(10,2); // Retorna a base x elevada à potência y do expoente, ou seja, xy.
+
+// Exercícios 28: String
+// Referências de: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String
+
+// Tipo primitivo
+// const mensagem = ' minha primeira mensagem ';
+// Tipo objeto
+// const outraMensagem = new String('bom dia');
+// No console:
+// typeof mensagem; --> string
+// typeof outraMensagem; --> object
+// mensagem(string) e outraMensagem(object ) o javascript encapsula mensagem como objeto por isso os dois tem acesso as propriedades de objetos.
+
+// outraMensagem.length; --> 7
+// outraMensagem[2]; --> 'm'
+// mensagem.includes('primeira'); --> true
+// mensagem.includes('vermelho'); --> false
+// mensagem.startsWith('minha'); --> true
+// mensagem.startsWith('verde'); --> false
+// mensagem.endsWith('mensagem'); --> true
+// mensagem.endsWith('olá'); --> false
+// mensagem.indexOf('primeira'); --> 6
+// mensagem.replace('minha', 'sua'); --> 'sua primeira mensagem'
+// mensagem.trim(); --> 'minha primeira mensagem'
+// mensagem.split(' '); --> ['', 'minha', 'primeira', 'mensagem', '']
+
+// Exercício 29: Template Literal
+// Referências de: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String
+// escape notation
+// Codigo	    Saida
+
+// \0	        o  caractere NULL
+// \'	        aspas simples
+// \"	        aspas duplas
+// \\	        barra invertida
+// \n	        nova linha
+// \r	        carriage return
+// \v	        tab vertical
+// \t	        tab
+// \b	        backspace   
+// \f	        form feed
+// \uXXXX	    unicode codepoint
+// \xXX	      the Latin-1 character
+
+// Jeito antigo
+//const mensagem = 'Oi isso é a minha\n' + '\'primeira\' mensagem';
+
+// Jeito Moderno
+// Object {}
+// Boolean true, false
+// string '', ""
+// Template Literal:
+// const outra = `Oi isso é a minha
+// 'primeira' mensagem`;
+// const nome = 'Gustavo';
+// const email = 
+// `Olá ${nome} ${2+2}
+
+// Obrigado por se inscrever no canal
+
+// Para acompanhar os vídeos não se esqueça de ativar o sino
+
+// Obrigado,
+// Jhonatan.`;
+
+// Meu Exercicio:
+// let aluno1 = new String('Gustavo');
+// let mensagemAluno = 
+// `Olá, aluno ${aluno1}, idade igual a ${2022 - 2001} anos.
+
+// Você foi convidado a participar da aula 21
+// de banco de dados
+
+// Seja muito bem vindo a turma
+
+// Te epero lá
+
+// ass: João Almeida, professor de Banco de Dados.`;
+
+// Exercício 30: Date 
+// É um tipo embutido
+// Referências de: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+//const date1 = new Date(); // jeito mais simples de criar um objeto Date, e ele traz a data atual
+//const date2 = new Date('March 06 2020 15:40'); // vc insere qualquer data q quiser
+//const date3 = new Date(2020,02,06,15,40); // outra maneira de inserie qualquer data q quiser, aqui o 02, no caso referente ao mes se refere ao mes de março pq os meses começam no 0 e terminam no 11, ou seja, janeiro é 00.
+//date3.setFullYear(2030);
+//date3.setHours(12,59);
+
+// No console:
+// date1;
+// date2;
+// date3;
+//date2.toDateString(); // transforma a date em string
+//date1.toTimeString(); // ve a zona temporal (GNT), mostra o tempo local
+//date2.toISOString(); // informação pra banco de dados, formato pra transferir dados do cliente para o servidor.
+// Meu exercício:
+// const dataAtual1 = new Date();
+// const dataAtual2 = new Date('May 21 2022 11:39');
+// const dataAtual3 = new Date(2022, 04,21,11,39);
+
+// Exercício 31: Mini-Projeto 11: Montador de Endereço
+// Javascript - Objeto Endereço
+
+// Criar um objeto endereco que contem:
+// Rua
+// Cidade
+// CEP
+// exibirEndereco(endereco)
+
+// Meu exercício:
+// let endereco = {
+//   rua: 'Rua dos alfeneiros',
+//   cidade: 'Little Whinging',
+//   CEP: '12312312',
+//   exibirEndereco(){
+//     console.log(rua, cidade, CEP)
+//   }
+// }
+
+// Exercício feito:
+// let endereco = {
+//   rua: 'a',
+//   cidade: 'b',
+//   cep: 'c'
+// } 
+
+// function exibirEndereco(endereco){
+//   for(let chave in endereco) {
+//     console.log(chave, endereco[chave]);
+//   }
+// }
+// exibirEndereco(endereco);
+
+// Exercício 32: Mini-Projeto 12: Encontre a Igualdade(Igualdade de objetos)
+// function Endereco(rua, cidade, cep) {
+//   this.rua = rua,
+//   this.cidade = cidade,
+//   this.cep = cep
+// }
+
+// const endereco1 = new Endereco('a', 'b', 'c');
+// const endereco2 = new Endereco('a', 'b', 'c');
+
+// function saoIguais(endereco1, endereco2) {
+  // comparar se as propriedades sao iguais ==
+//   return endereco1.rua === endereco2.rua && endereco1.cidade === endereco2.cidade && endereco1.cep === endereco2.cep;
+// }
+
+// const endereco3 = endereco1; // como o endereco3 está sendo referenciado ao endereco1 eles vao dar true no return da function temEnderecoMemoriaIguais --> endereco1 === endereco3;
+
+// function temEnderecoMemoriaIguais(endereco1, endereco2) {
+  // comparando se a referencia do objeto aponta para o mesmo local na memoria ===
+  //return endereco1 === endereco2; --> false
+  //return endereco1 === endereco1; // true, pois eles têm os mesmos endereços de memoria.
+//}
+// console.log(saoIguais(endereco1, endereco2));
+// console.log(temEnderecoMemoriaIguais(endereco1, endereco2));
+
+// Exercício 33: Mini-Projeto 13: Montador de Postagem de Blog
+// Objeto Postagem de Blog
+// Eu quero que você crie neste exercício um objeto de postagem de blog que vai conter as seguintes propriedades
+// postagem
+/* 
+titulo
+mensagem
+autor
+visualizaçoes
+comentario
+  [autor, mensagem]
+  estaAoVivo
+*/
+
+// let postagem = {
+//   titulo: 'a',
+//   mensagem: 'b',
+//   autor:'c',
+//   visualizacoes: 2000,
+//   comentarios: [
+//     {autor:'w', mensagem:'s'},
+//     {autor:'w', mensagem:'s'},
+//     {autor:'w', mensagem:'s'},
+//     {autor:'w', mensagem:'s'}
+//     ],
+//   estaAoVivo: true
+// }
+// console.log(postagem);
+
+// Exercício 34: Exemplos de Constructor Function
+// Criar um objeto postagem
+// titulo, mensagem, autor, visualizacoes, comentarios, estaAoVivo
+
+// Meu exercicio:
+// function Postagem(titulo, mensagem, autor, visualizacoes, comentarios, estaAoVivo) {
+//   this.titulo = titulo;
+//   this.mensagem = mensagem;
+//   this.autor = autor;
+//   this.visualizacoes = visualizacoes;
+//   this.comentarios = comentarios;
+//   this.estaAoVivo = estaAoVivo;
+// }
+
+// let postagem1 = new Postagem('Guerra', 'As suas lutas são as minhas lutas', 'João', 2000, 'blablablah', true);
+// console.log(postagem1);
+
+// O exercicio feito pelo professor:
+// function Postagem(titulo, mensagem, autor) {
+//   this.titulo = titulo;
+//   this.mensagem = mensagem;
+//   this.autor = autor;
+//   this.visualizacoes = 0;
+//   this.comentarios = [];
+//   this.estaAoVivo = false;
+// }
+// let postagem = new Postagem('a', 'b', 'c');
+// console.log(postagem);

@@ -1052,3 +1052,388 @@ comentario
 // }
 // let postagem = new Postagem('a', 'b', 'c');
 // console.log(postagem);
+
+// Exercício 35: Faixa de Preço
+// É que você um array de objetos de faixas de preço para que ela possa ser usado em um site igual o mercado livre
+
+// Primeiro jeito:
+// let faixa = [
+//   {tooltip: 'até R$700', minimo: 0, maximo: 700},
+//   {tooltip: 'de R$700 a R$1000', minimo: 700, maximo: 1000},
+//   {tooltip: 'de R$1000 ou mais', minimo: 1000, maximo: 9999999}
+// ];
+
+// Segundo jeito:
+// function criaFaixaPreco(tooltip, minimo, maximo) {
+//   return {
+//     tooltip, 
+//     minimo, 
+//     maximo
+//   }
+// }
+// let faixa2 = [
+//   criaFaixaPreco('a', 1, 100),
+//   criaFaixaPreco('b', 100, 1000),
+//   criaFaixaPreco('c', 1000, 10000)
+// ]
+
+// Terceiro jeito: (Constructor Function)
+// function FaixaPreco(tooltip, minimo, maximo){
+//   this.tooltip = tooltip;
+//   this.minimo = minimo;
+//   this.maximo = maximo;
+// }
+
+// Oq o professor:
+// let faixa3 = [
+//   new FaixaPreco('d', 10, 20),
+//   new FaixaPreco('e', 20, 30),  
+//   new FaixaPreco('f', 30, 40)
+// ];
+
+// oq eu fiz
+// let faixa3 = new FaixaPreco(
+//   {tooltip: 'até R$700', minimo: 0, maximo: 700},
+//   {tooltip: 'de R$700 a R$1000', minimo: 700, maximo: 1000},
+//   {tooltip: 'de R$1000 ou mais', minimo: 1000, maximo: 9999999});
+
+// console.log(faixa);
+// console.log(faixa2);
+// console.log(faixa3);
+
+// Introdução a funções de arrays
+// Add novos elementos 
+// Encontrar elementos
+// Remover elementos
+// Dividir elementos
+// Dividir Arrays
+// Combinar Arrays
+
+// Exercício 36: Add novos elementos
+//const numeros = [1,2,3];
+//numero = [] --> não se pode alterar uma const assim
+
+// Início
+//numeros.unshift(0); // adicona 0 no começo do array
+//console.log(numeros);
+
+// Meio
+//numeros.splice(1, 0, 'a'); // -- 1 referente ao indice q ele vai adicionar depois(adicionar um numero depois do 1); 0 é a quantidade pra ele deletar (0 pra ele não deletar nenhum valor de array) e 'a' vai ser o valor q vai ser adicionado depois do 1
+//console.log(numeros);
+
+// Final
+// numeros.push(5); // adicona 5 no fim do array
+// console.log(numeros);
+
+// Meu exercício:
+// const alfabeto = ['b','d','e']
+// alfabeto.unshift('a');
+// console.log(alfabeto);
+// alfabeto.splice(2,0,'c');
+// console.log(alfabeto);
+// alfabeto.push('f');
+// console.log(alfabeto);
+
+// Exercício 37: Encontrando elementos(tipos primitivos)
+//const numeros = [1,2,3,1,4];
+//console.log(numeros.indexOf(2));
+// indexOf --> procura o indice do numero dado, caso o numero nao existe no array ele vai retornar com valor -1
+//console.log(numeros.indexOf(5));
+//console.log(numeros.indexOf('5')); // --> ele procura tb pelo tipo, (só aceita number).
+//console.log(numeros.lastIndexOf(1)); // ele vai procurar a última occorencia desse valor, a última occorencia do numero 1 é no indice 3.
+
+// Formas de ver se existe o numero no array
+//console.log(numeros.indexOf(2) !== -1); // se for diferente de -1, ou seja, true, o numero existe no array
+//console.log(numeros.includes(2));
+
+// Meu exercicio:
+// let info = [20,'maria', 'jose', 20, 1000, true]
+// console.log(info.indexOf('maria'));
+// console.log(info.lastIndexOf(20));
+// console.log(info.indexOf('maria'));
+// console.log(info.indexOf(1000) !== -1);
+// console.log(info.includes(1000));
+
+// Exercício 37: Encontrando elementos(tipos de referência)
+// O método find() retorna o valor do primeiro elemento do array que satisfizer a função de teste provida. Caso contrario, undefined é retornado.
+// Referência do conteúdo: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+
+// const marcas = [
+//   {id:1, nome: 'a'},
+//   {id:2, nome: 'b'}
+// ];
+
+//console.log(marcar.includes({id:1, nome: 'a'})); // --> vai dar erro, pois a referencia da memoria do objeto procurado vai ser diferente do objeto criado no começo!
+
+// Find vai ajudar a gente a procurar o tipo de referencia, caso não ache, ele retorna undefined:
+// const marca = marcas.find(function(marca) {
+//   return marca.nome === 'a'
+// });
+// console.log(marca);
+
+// Meu exercicio:
+// const carro = [
+//   {placa:112323, nome: 'volk', rodas: 4},
+//   {placa:342332, nome: 'Uno', rodas: 5},
+//   {placa:342332, nome: 'Uno', rodas: 6}
+// ];
+
+// const peca = carro.find(function(peca) {
+//   return peca.rodas > 4;
+// })
+
+// console.log(peca);
+// retorna a primeira q satifaz a condição
+
+// Exercício 38: Arrow Functions
+// Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+// const marcas = [
+//   {id:1, nome: 'a'},
+//   {id:2, nome: 'b'}
+// ];
+//Original:
+// console.log(marcas.find(function(marca) {
+//   return marca.nome === 'a';
+// }));
+
+// Arrow Function 1: ele tira a palavra function e coloca depois do parentesees uma flecha =>
+// console.log(marcas.find((marca) =>{
+//   return marca.nome === 'a';
+// }));
+
+// Arrow Function 2: Quando só existe um parâmetro, podemos remover os parênteses envolvendo os parâmetros:
+// console.log(marcas.find(marca =>{
+//   return marca.nome === 'a';
+// }));
+
+// Arrow Function 3: Podemos simplificar mais: tirando o {} e o return e colocando o ) la no final.
+// console.log(marcas.find(marca => marca.nome === 'a'));
+
+// Arrow Function 4: Podemos simplificar mais ainda: caso nao tenhamos parametros, tiramos a marca e colocamos () vazio.
+// console.log(marcas.find(() => marca.nome === 'a'));
+
+// Meu ecercicio:
+// const bicicleta = [
+//   {pnel: 2, aro:'tipo A', amortecedor: true},
+//   {pnel: 2, aro:'tipo B', amortecedor: false}
+// ];
+
+// const parte1 = bicicleta.find((parte1) => {
+//   return parte1.aro === 'tipo B';
+// });
+// console.log(parte1);
+
+// Exercício 39: Removendo Elementos
+// const numeros = [1,2,3,4,5,6];
+
+// Início
+// const primeiro = numeros.shift(); // remove o primeiro valor do array
+// console.log(primeiro);
+// console.log(numeros);
+
+// Meio
+// const meio = numeros.splice(2,1); // 2 referente ao indice 2 do array e 1 é a quantidades de numeros q tu quer q ele remova depois desse indice.
+// console.log(meio);
+// console.log(numeros);
+
+// Final
+// const final = numeros.pop(); // remove o último valor do array
+// console.log(final);
+// console.log(numeros);
+
+// Meu exercicio:
+// const alfabeto = ['a','b','c','d','e','f'];
+// const inicio = alfabeto.shift();
+// console.log(inicio);
+// console.log(alfabeto);
+// const meio = alfabeto.splice(3,1);
+// console.log(meio);
+// console.log(alfabeto);
+// const fim = alfabeto.pop();
+// console.log(fim);
+// console.log(alfabeto);
+
+// Exercício 39: Esvaziando um array
+// let numeros = [1,2,3,4,5,6];
+// let outros = numeros;
+
+// Solução 1 não é tão eficiente por causa da referencia em memoria em outros array q eu posso fazer
+// numeros = []
+// console.log(numeros);
+// console.log(outros); // não apaga a referencia na memoria, ou seja, o array outros ainda vai ter os valores [1,2,3,4,5,6], mesmo agora.
+
+// Solução 2 A mais efetiva
+// numeros.length = 0;
+// console.log(numeros);
+// console.log(outros);
+
+// Solução 3 A segunda mais efetiva
+// numeros.splice(0, numeros.length);
+// console.log(numeros);
+// console.log(outros);
+
+// Solução 4 não é tão eficiente pq ta dentro de while, imagina o quanto ele pode rodar dependendo do tamanho do array
+// while(numeros.length > 0) {
+//   numeros.pop();
+// }
+// console.log(numeros);
+// console.log(outros);
+
+// Meu exercicio:
+// let alfabeto = ['a','b','c','d','e','f'];
+// let alfabeto2 = alfabeto;
+// alfabeto = [];
+// console.log(alfabeto);
+// console.log(alfabeto2);
+
+// alfabeto.length = 0;
+// console.log(alfabeto);
+// console.log(alfabeto2);
+
+// alfabeto.splice(0, alfabeto.length);
+// console.log(alfabeto);
+// console.log(alfabeto2);
+
+// while(alfabeto.length > 0) {
+//   alfabeto.pop();
+// }
+// console.log(alfabeto);
+// console.log(alfabeto2);
+
+// Exercício 40: Combinando e cortando arrays
+// const primeiro = [1,2,3];
+// const primeiroArray = [{id:1}];
+// const segundo = [4,5,6];
+// primeiroArray[0] = 10;
+
+// Combinar
+// const combinado = primeiro.concat(segundo); // O método concat() concatena / combina array
+// console.log(combinado);
+
+// Dividir
+// método slice() divide o array, existem 3 opções com o slice
+// const cortado = combinado.slice(1,3); // o 1 tem a ver com o indice inicial e o 3 com o (indice final -1) do nosso método, ex: combinado = [1,2,3,4,5,6] -> [2,3];
+// console.log(cortado);
+
+// const cortado2 = combinado.slice(3); //slice com apenas 1 parametro tira todos os numeros do lado esquerdo ao indice, o proprio indice, continua no array -> [4, 5, 6] os outros [1, 2, 3] ele corta pra fora do array.
+// console.log(cortado2);
+
+// const cortado3 = combinado.slice(); // slice com parametro vazio copia todo o array pra cortado3, ele copia tb a referencia de memoria, pra caso vc use um objeto.
+// console.log(combinado);
+// console.log(cortado3);
+
+// const combinado2 = primeiroArray.concat(segundo); // copia a referencia na memoria, olha o indice 0 q ficou 10 pq alterou ele la em cima.
+// const cortado4 = combinado2.slice(); 
+// console.log(cortado4);
+
+// Meu exercicio
+// const alfabeto1 = [{nome:'Joe'},'b','c','d'];
+// const alfabeto2 = ['e','f','g','h'];
+// alfabeto1[0] = 'a';
+// const combinaAlfabeto = alfabeto1.concat(alfabeto2);
+// const copia = combinaAlfabeto.slice();
+// console.log(copia);
+// const cortado1 = combinaAlfabeto.slice(2);
+// console.log(cortado1);
+// const cortado2 = combinaAlfabeto.slice(2,5);
+// console.log(cortado2);
+
+// Exercício 41: Combinando e clonando arrays com spread
+// Tem uma forma mais intuitiva de combinar(clonar) e cortar array com Spread:
+// const primeiro = [1,2,3];
+// const segundo = [4,5,6];
+
+// Combinando:
+// const combinado1 = [...primeiro, 'a',...segundo, '#']; // da pra combinar e adicionar oq quiser.
+// console.log(combinado1);
+// const combinado2 = [...primeiro,...segundo]; // apenas combinando. 
+
+// clonando:
+// const clonado = [...combinado1];
+// console.log(clonado);
+
+// Meu exercicio:
+// const combina = [...primeiro,'%',...segundo];
+// console.log(combina);
+// const clona = [...combina];
+// console.log(clona);
+
+// Exercício 42: Iterando um Array com o forEach
+// const numeros = [1,2,3,4,5];
+
+// Poderiamos usar o for...of
+// for(numero of numeros)
+// console.log(numeros);
+
+// método forEach
+// numeros.forEach(function(numero){
+//   console.log(numero);
+// })
+
+// método forEach com arrow function
+// numeros.forEach((numero, indice) => console.log(numero, indice));
+
+// Meu exercicio:
+// const alfabeto = ['a','b','c','d','e','f'];
+// alfabeto.forEach(function(letra){
+//   console.log(letra);
+// })
+// alfabeto.forEach((letra, indice) =>
+//   console.log(letra+' o indice dela é ',indice));
+
+// Exercício 43: Combinando Array e string com join e separando com split.
+// const numeros = [1,2,3,4,5];
+// const junta = numeros.join('.'); // junta - com o array
+// console.log(junta); // --> 1-2-3-4-5
+
+// const frase = 'Olá bem vindo ao curso';
+// const resultado = frase.split(' ');
+// console.log(resultado); 
+
+// console.log(resultado.join('-')); 
+
+// Meu exercicio:
+// Exemplo join funciona com array
+// Exemplo split funciona com string
+// Pegue algum url na internet e tente replicar ele usando o join
+
+// const alfabeto = ['a','b','c','d','e','f'];
+// const juntado = alfabeto.join('-');
+// console.log(juntado);
+
+// const frase2 = "aprendendo ingles com videos 041 a simple mind trick will help you think more rationally";
+// const resultado = frase2.split(' ');
+// console.log(resultado.join('-'));
+// aprendendo-ingles-com-videos-041-a-simple-mind-trick-will-help-you-think-more-rationally --> chamamos isso de slug, essa url com traços.
+
+// Exercício 44: Input: Como receber dados do usuário
+// let corFavorita = prompt('Olá, qual é a sua cor preferida?');
+// document.write(corFavorita);
+// if(corFavorita === 'vermelho') {
+//   alert('Essa é minha cor favorita tb!')
+// }
+
+// Meu exercicio:
+// let idade = prompt('Qual sua idade?')
+// if(idade >= 18) {
+//   alert('Você é maior de idade', ', idade = ' + idade);
+//   document.write('Você é maior de idade', ', idade = ' + idade)
+// }else {
+//   alert('Você é menor de idade', ', idade = ' + idade);
+//   document.write('Você é menor de idade', ', idade = ' + idade)}
+
+// Exercício 45: Manipulação de DOM, eu vou fazer dom em um curso especifico pra ele!
+
+// Exercício 46: Mini-Projeto 14: Segurança Virtual
+
+// function VerificarEntrada() {
+//   nomeConvidado = document.getElementById('nome').value;
+//   ConvidadosCristian = ['Amanda', 'Sabrina', 'Rafael', 'Jonas', 'Carol', 'Jhonatan', 'Gustavo'];
+//   // includes compara string e array com valores string.
+//   if(ConvidadosCristian.includes(nomeConvidado)) {
+//     document.getElementById('PermissaoDeEntrada').innerText = 'Você pode entrar"'
+//   }else {
+//     document.getElementById('PermissaoDeEntrada').innerText = 'Você não pode entrar'
+//   }
+// }
